@@ -1,4 +1,4 @@
-Winter 2021 Data Science Intern Challenge 
+### Winter 2021 Data Science Intern Challenge 
 
 Please complete the following questions, and provide your thought process/work. You can attach your work in a text file, link, etc. on the application page. Please ensure answers are easily visible for reviewers!
 
@@ -26,26 +26,31 @@ c.	What is its value?
 
 **Question 2: For this question you’ll need to use SQL. Follow this link to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.**
 
-a.	How many orders were shipped by Speedy Express in total? - Answer: 54 orders
+a.	How many orders were shipped by Speedy Express in total? - **Answer: 54 orders**
+```
 SELECT COUNT(*) FROM Orders
 LEFT JOIN Shippers ON Shippers.ShipperID = Orders.ShipperID
 WHERE ShipperName = 'Speedy Express';
-b.	What is the last name of the employee with the most orders? - Answer: Peacock
+```
+b.	What is the last name of the employee with the most orders? - **Answer: Peacock**
+```
 SELECT Employees.EmployeeID, Employees.LastName, COUNT(*) AS NumberOrders 
 FROM Orders
 LEFT JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID
 GROUP BY Employees.EmployeeID
 ORDER BY NumberOrders DESC
 LIMIT 1;
+```
 Or:
+```
 SELECT LastName, MAX(NumberOrders)
 FROM 
   (SELECT Employees.EmployeeID, Employees.LastName, COUNT(*) AS NumberOrders FROM Orders
   LEFT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
   GROUP BY Employees.EmployeeID);
-
-c.	What product was ordered the most by customers in Germany? - Answer: Boston Crab Meat
-
+```
+c.	What product was ordered the most by customers in Germany? - **Answer: Boston Crab Meat**
+```
 SELECT Products.ProductID, Products.ProductName, SUM(Quantity) as TotalQuantity 
 FROM OrderDetails
 LEFT JOIN Products ON Products.ProductID = OrderDetails.ProductID
@@ -55,9 +60,9 @@ WHERE Customers.Country = 'Germany'
 GROUP BY Products.ProductID
 ORDER BY TotalQuantity DESC
 LIMIT 1;
-
+```
 OR:
-
+```
 SELECT ProductName, MAX(TotalQuantity)
 FROM 
   (SELECT Products.ProductID, Products.ProductName, SUM(Quantity) as TotalQuantity FROM OrderDetails
@@ -65,4 +70,5 @@ FROM
   LEFT JOIN Orders ON Orders.OrderID = OrderDetails.OrderID
   LEFT JOIN Customers ON Customers.CustomerID = Orders.CustomerID
   WHERE Customers.Country = 'Germany'
-  GROUP BY Products.ProductID);       
+  GROUP BY Products.ProductID);
+  ```
