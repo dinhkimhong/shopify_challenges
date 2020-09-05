@@ -1,4 +1,4 @@
-### Winter 2021 Data Science Intern Challenge 
+## Winter 2021 Data Science Intern Challenge 
 
 Please complete the following questions, and provide your thought process/work. You can attach your work in a text file, link, etc. on the application page. Please ensure answers are easily visible for reviewers!
 
