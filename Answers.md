@@ -23,6 +23,7 @@ c.	What is its value?
 
 > Average user spending in March (exclude orders have 2000 items and orders have items which have price is $25,725): $4,979.47 
 
+Analysis details: https://github.com/dinhkimhong/shopify_challenges/blob/master/shopify_challenges_1.ipynb
 
 **Question 2: For this question you’ll need to use SQL. Follow this link to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.**
 
