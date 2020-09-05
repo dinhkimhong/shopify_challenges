@@ -9,12 +9,18 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
 
 a.	Think about what could be going wrong with our calculation. Think about a better way to evaluate this data. 
 >	We calculated AOV without checking outliers which would turn our calculation wrong.
-I found outliers that 17 orders have huge quantity sold at 2000 items ~ $704,000/orders while other orders have quantity from 1 to 8 items only and product in shop number 78 has high price at $25,725 compare to products in others stores which have price in a range from $90 to $352.</font>
+I found outliers that 17 orders have huge quantity sold at 2000 items ~ $704,000/orders while other orders have quantity from 1 to 8 items only and product in shop number 78 has high price at $25,725 compare to products in others stores which have price in a range from $90 to $352.
+
 >	Each store sells only one model of shoe, the price of products are different and user would purchase more than 1 product (place many orders in different stores) so to evaluate this data, I would like to calculate an average user spending.
+
 b.	What metric would you report for this dataset?
+
 > Average order value and average user spending
+
 c.	What is its value?
+
 > Average order value in March (exclude orders have 2000 items and orders have items which have price is $25,725): $302.58
+
 > Average user spending in March (exclude orders have 2000 items and orders have items which have price is $25,725): $4,979.47 
 
 
