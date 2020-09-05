@@ -41,7 +41,7 @@ GROUP BY Employees.EmployeeID
 ORDER BY NumberOrders DESC
 LIMIT 1;
 ```
-Or:
+OR:
 ```
 SELECT LastName, MAX(NumberOrders)
 FROM 
