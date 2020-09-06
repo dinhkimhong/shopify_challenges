@@ -18,9 +18,9 @@ b.	What metric would you report for this dataset?
 
 c.	What is its value?
 
-> Average order value in March (exclude orders have outliers in total_items and unit_price): $300.00
+> Average order value in March 2017 (exclude orders have outliers in total_items and unit_price): $300.00
 
-> Average user spending in March (exclude orders have outliers in total_items and unit_price): $4,902.00
+> Average user spending in March 2017 (exclude orders have outliers in total_items and unit_price): $4,902.00
 
 Analysis details: https://github.com/dinhkimhong/shopify_challenges/blob/master/shopify_challenges_1.ipynb
 
