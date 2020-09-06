@@ -8,8 +8,7 @@ Please complete the following questions, and provide your thought process/work. 
 On Shopify, we have exactly 100 sneaker shops, and each of these shops sells only one model of shoe. We want to do some analysis of the average order value (AOV). When we look at orders data over a 30 day window, we naively calculate an AOV of $3145.13. Given that we know these shops are selling sneakers, a relatively affordable item, something seems wrong with our analysis. 
 
 a.	Think about what could be going wrong with our calculation. Think about a better way to evaluate this data. 
->	We calculated AOV without checking outliers which would turn our calculation wrong.
-I found outliers that 17 orders have huge quantity sold at 2000 items ~ $704,000/orders while other orders have quantity from 1 to 8 items only and product in shop number 78 has high price at $25,725 compare to products in others stores which have price in a range from $90 to $352.
+>	We calculated AOV without checking outliers which would turn our calculation wrong. We should remove outliers before calculating AOV.
 
 >	Each store sells only one model of shoe, the price of products are different and user would purchase more than 1 product (place many orders in different stores) so to evaluate this data, I would like to calculate an average user spending.
 
@@ -19,9 +18,9 @@ b.	What metric would you report for this dataset?
 
 c.	What is its value?
 
-> Average order value in March (exclude orders have 2000 items and orders have items which have price is $25,725): $302.58
+> Average order value in March (exclude outliers in total_items and unit_price): $300.00
 
-> Average user spending in March (exclude orders have 2000 items and orders have items which have price is $25,725): $4,979.47 
+> Average user spending in March (exclude outliers in total_items and unit_price): $4,902.00
 
 Analysis details: https://github.com/dinhkimhong/shopify_challenges/blob/master/shopify_challenges_1.ipynb
 
